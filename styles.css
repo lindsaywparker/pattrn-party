@@ -58,14 +58,11 @@ a {
 }
 
 .accent-line {
+  width: 90%;
+  max-width: 1000px;
   height: 1px;
   margin: auto;
   background-color: #D1D2D3;
-}
-
-.accent-line {
-  width: 90%;
-  max-width: 1000px;
 }
 
 .header-accent-line {

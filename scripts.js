@@ -5,7 +5,6 @@ $('.tab-name').on('click', function() {
   $(this).siblings().addClass('active-tab');
 });
 
-
 $('.menu-button').on('click', function() {
   $('.nav-links-search').toggleClass('open-menu');
-})
+});
