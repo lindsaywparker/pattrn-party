@@ -8,6 +8,8 @@ body {
   text-align: center;
 }
 
+
+/* PAGE */
 header {
   height: 100px;
   padding: 10px;
@@ -38,24 +40,272 @@ h2 {
   font-weight: 300;
 }
 
-button {
+.view-code-button {
   width: 290px;
   height: 60px;
+  padding: 15px;
   border: none;
   border-radius: 0;
+  margin: auto;
+  margin-bottom: 50px;
   background-color: #3F3244;
+}
+
+a {
   color: #FFF;
   font-size: 22px;
+  text-decoration: none;
 }
 
 .accent-line {
-  width: 80px;
   height: 1px;
   margin: auto;
   background-color: #D1D2D3;
 }
 
+.accent-line {
+  width: 90%;
+  max-width: 1000px;
+}
+
 .header-accent-line {
+  width: 80px;
   margin: 10px auto;
   background-color: #666666;
+}
+
+/* ACCORDIAN TABS */
+.accordian-tabs {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  border: 1px solid #D1D2D3;
+  margin: 100px auto 30px;
+  text-align: left;
+}
+
+.tab-content-container {
+  height: 0;
+  overflow: hidden;
+}
+
+.active-tab {
+  height: auto;
+}
+
+.tab-name.active-tab {
+  background: #FFF url(./assets/subtract.svg) no-repeat 95% center/20px;
+  font-weight: 600;
+}
+
+.tab-name {
+  height: 55px;
+  padding-left: 10px;
+  border: 1px solid #FFF;
+  background: #F2F2F2 url(./assets/add.svg) no-repeat 95% center/20px;
+  color: #666666;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.accordian-tabs-outline img {
+  width: 100%;
+  height: 125px;
+  border: 1px solid #D1D2D3;
+  object-fit: cover;
+}
+
+.tab-name, .tab-content-heading, .tab-content-text {
+  padding: 10px 15px;
+}
+
+.tab-content-text {
+  font-size: 15px;
+  line-height: 1.7em;
+}
+
+
+/* FLEXIBLE CARDS */
+.flexible-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  max-width: 1000px;
+  margin: 100px auto 30px;
+  padding: 15px;
+}
+
+.flexible-cards article {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #D1D2D3;
+  margin: 20px auto;
+}
+
+.flexible-cards h3 {
+  height: 45px;
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.flexible-cards img {
+  width: 100%;
+  height: 253px;
+  border-top: 1px solid #D1D2D3;
+  object-fit: cover;
+}
+
+/* HEADER BAR */
+.header-bar-outline {
+  padding: 15px;
+}
+
+.header-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 15px 10px;
+  margin: 50px auto 250px;
+  background-color: #D1D2D3;
+}
+
+.header-image {
+  height: 50px;
+  border-radius: 50px;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+.nav-links-search {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #F2F2F2;
+  visibility: hidden;
+}
+
+.nav-link {
+  text-align: left;
+}
+
+.search-input {
+  width: 100%;
+  height: 30px;
+  padding-left: 30px;
+  border: 1px solid #D1D2D3;
+  background: #FFF url('http://www.freeiconspng.com/uploads/magnifying-glass-icon-3.png') no-repeat center left/20px;
+}
+
+.open-menu {
+  visibility: visible;
+}
+
+
+@media screen and (min-width: 768px) {
+  /* PAGE */
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    padding: 10px 25px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .student-name {
+    margin: 10px 0;
+  }
+  
+  .header-accent-line {
+    display: none;
+  }
+
+  
+
+  /* ACCORDIAN TABS*/
+  .accordian-tabs {
+    display: flex;
+    border: none;
+    height: 500px;
+  }
+  
+  .tab {
+    flex-basis: 25%;
+  }
+  
+  .tab-name, .tab-name.active-tab {
+    border-bottom: 1px solid #D1D2D3;
+    background-image: none;
+  }
+  
+  .tab-name.active-tab {
+    border: 1px solid #D1D2D3;
+    border-bottom: none;
+  }
+  
+  .tab-content-container.active-tab {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px;
+    border: 1px solid #D1D2D3;
+    border-top: none;
+  }
+  
+  /* FLEXIBLE CARDS */
+  .flexible-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .image-wide {
+    grid-column: span 2;
+  }
+  
+  /* HEADER BAR */
+  .header-bar {
+    height: 120px;
+    padding: 25px;
+    margin-bottom: 50px;
+  }
+
+  .header-image {
+    height: 70px;
+    border-radius: 35px;
+  }
+
+  .menu-button {
+    visibility: hidden;
+  }
+
+  .nav-links-search {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #D1D2D3;
+    visibility: visible;
+  }
+
+  .nav-link {
+    text-align: center;
+    margin: 14px;
+  }
+
+  .search-input {
+    width: auto;
+    height: 45px;
+  }
 }
